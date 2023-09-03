@@ -15,6 +15,7 @@ export class SdrAngelApiService {
         response.devicesetlist.deviceSets.forEach((item) => {
           item.channels?.forEach((channel) => {
             channel.samplingIndex = item.samplingDevice.index;
+            channel.hwType = item.samplingDevice.hwType;
           })
         })
 

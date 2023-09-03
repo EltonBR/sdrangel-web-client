@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ChannelModel, SamplingDeviceModel } from '../shared/models/deviceset.model';
-import { SDRAngelInfoModel } from '../shared/models/sdrangel-info.model';
+import { SamplingDeviceModel, ChannelModel } from '../models/deviceset.model';
+import { SDRAngelInfoModel } from '../models/sdrangel-info.model';
 
 @Injectable({
   providedIn: 'root'

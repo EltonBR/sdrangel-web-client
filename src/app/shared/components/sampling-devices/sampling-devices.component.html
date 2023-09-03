@@ -1,1 +1,6 @@
-<p>sampling-devices works!</p>
+<p *ngFor="let item of samplingDevices;">
+
+    <span *ngIf="item.hwType === 'RTLSDR'">
+        <app-rtl-sdr-device [samplingDeviceIndex]="item.index"></app-rtl-sdr-device>
+    </span>
+</p>

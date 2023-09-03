@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { devicesetListModel } from 'src/app/shared/models/deviceset-list.model';
 import { SDRAngelModel } from 'src/app/shared/models/sdrangel.model';
 import { SdrAngelApiService } from 'src/app/shared/services/sdr-angel-api.service';
-import { AppStateService } from 'src/app/state/app-state.service';
+import { AppStateService } from 'src/app/shared/state/app-state.service';
 
 @Component({
   selector: 'app-home',
