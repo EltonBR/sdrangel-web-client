@@ -10,15 +10,11 @@ import { AppStateService } from 'src/app/shared/state/app-state.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-open = false;
-
-  toggle() {
-    this.open = !this.open;
+  onChangeFreq(frequency: number) {
+    console.log(frequency)
   }
+  constructor(private api: SdrAngelApiService, private appState: AppStateService) {}
 
-  constructor(private api: SdrAngelApiService, private appState: AppStateService) {
-
-  }
   ngOnInit(): void {
     this.api.getCurrentState().subscribe((response: SDRAngelModel) => {
 
