@@ -17,12 +17,13 @@ export interface ChannelModel {
     direction: 0; //0 rx 1 tx
     id: string;
     index: number;
+    samplingIndex: number;
     title: string;
     uid: number;
 }
 
 export interface DevicesetModel {
     channelcount: number;
-    channels: ChannelModel[];
+    channels?: ChannelModel[];
     samplingDevice: SamplingDeviceModel;
 }

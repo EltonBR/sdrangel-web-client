@@ -1,0 +1,62 @@
+@import '../../../theme.scss';
+
+
+main {
+    color: $text-color;
+}
+
+dialog {
+    border: 1px solid $primary-color;
+    box-shadow: 0px 0px 3px $primary-color;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    color: $text-color;
+    padding: 0px;
+}
+
+header {
+    background-color: $primary-color;
+    color: $text-color;
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-8 {
+    flex: 8;
+}
+
+.min-w-200 {
+min-width: 200px;
+background-color: red;
+}
+
+
+.max-w-300 {
+    max-width: 300px;
+}
+.min-w-500 {
+    min-width: 500px;
+    background-color: rgb(0, 119, 54);
+}

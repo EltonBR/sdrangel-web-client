@@ -1,7 +1,7 @@
 import { DevicesetModel } from "./deviceset.model"
 
 export interface devicesetListModel {
-    devicesetlist: DevicesetModel[];
+    deviceSets: DevicesetModel[];
     devicesetcount: number;
     devicesetfocus: number;
 }
