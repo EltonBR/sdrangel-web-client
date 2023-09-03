@@ -1,6 +1,7 @@
 <p *ngFor="let item of samplingDevices;">
 
     <span *ngIf="item.hwType === 'RTLSDR'">
+        {{item.index}}
         <app-rtl-sdr-device [samplingDeviceIndex]="item.index"></app-rtl-sdr-device>
     </span>
 </p>

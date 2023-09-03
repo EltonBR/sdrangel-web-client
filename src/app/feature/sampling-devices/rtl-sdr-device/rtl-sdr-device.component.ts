@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { AppEventsService } from 'src/app/shared/events/app-events.service';
+import { RtlSdrSettingsModel } from 'src/app/shared/models/rtl-sdr-settings.model';
+import { RtlSdrService } from 'src/app/shared/services/rtl-sdr.service';
 
 @Component({
   selector: 'app-rtl-sdr-device',
@@ -8,16 +11,24 @@ import { Component, EventEmitter, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule]
 })
-export class RtlSdrDeviceComponent {
-
+export class RtlSdrDeviceComponent implements OnInit {
+  
   @Input() samplingDeviceIndex!: number;
+  constructor(private events: AppEventsService, private rtlSdrService: RtlSdrService) {
+  }
 
-  e = new EventEmitter();
+  ngOnInit(): void {
+    this.getCurrentConfig(); 
+  }
 
- constructor() {
-  this.e.emit();
+  getCurrentConfig(): void {
 
-  this.e.subscribe
- }
+  this.rtlSdrService.getCurrentConfig(this.samplingDeviceIndex).subscribe((response) => {
+    console.log(response)
+  });
+
+  }
+
+  patchConfig(cfg: Partial<RtlSdrSettingsModel>): void {}
 
 }
