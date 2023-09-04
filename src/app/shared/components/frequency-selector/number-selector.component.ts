@@ -3,18 +3,20 @@ import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, O
 import { fromEvent } from 'rxjs';
 
 @Component({
-  selector: 'app-frequency-selector',
-  templateUrl: './frequency-selector.component.html',
-  styleUrls: ['./frequency-selector.component.scss'],
+  selector: 'app-number-selector',
+  templateUrl: './number-selector.component.html',
+  styleUrls: ['./number-selector.component.scss'],
   standalone: true,
   imports: [CommonModule]
 })
-export class FrequencySelectorComponent implements AfterViewInit, OnChanges {
+export class NumberSelectorComponent implements AfterViewInit, OnChanges {
 
   @ViewChildren('freqDigit') freqDigits!: QueryList<any>;
   @Input() frequencyKhz!: number;
   @Output() onChangeFrequency = new EventEmitter<number>();
+  @Input() styleNum = 2;
   displayFrequency = 0;
+  @Input() maxDigits = 7;
   
   ngAfterViewInit(): void {
     this.bindEvents(this.freqDigits.toArray())
@@ -30,7 +32,7 @@ export class FrequencySelectorComponent implements AfterViewInit, OnChanges {
 
   sumToFrequency(frequency: number): void {
 
-    if (this.displayFrequency+frequency < 0 || this.displayFrequency+frequency > 9e6) {
+    if (this.displayFrequency+frequency < 0 || (this.displayFrequency+frequency).toString().length >= this.freqDigits.length+1) {
       return;
     }
 
@@ -43,8 +45,7 @@ export class FrequencySelectorComponent implements AfterViewInit, OnChanges {
   }
 
   setFrequency(frequency: number): void {
-    if (frequency < 0 || frequency > 9e6) {
-      console.log(frequency)
+    if (frequency < 0 || frequency > parseFloat(`9e${this.freqDigits.length-1}`)) {
       return;
     }
 
@@ -57,7 +58,7 @@ export class FrequencySelectorComponent implements AfterViewInit, OnChanges {
   }
 
   multiplyByIndex(index: number): number {
-    return parseInt(`1${''.padEnd(Math.abs(index-6), '0')}`);
+    return parseInt(`1${''.padEnd(Math.abs(index-(this.freqDigits.length-1)), '0')}`);
   }
 
   bindEvents(digits: ElementRef[]): void {

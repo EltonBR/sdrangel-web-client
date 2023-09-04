@@ -6,7 +6,26 @@
     <div class="flex-2 min-w-200 max-w-300">
         <app-sampling-devices></app-sampling-devices>
     </div>
-    <div class="flex-8 min-w-500"> <app-frequency-selector [frequencyKhz]="1000" (onChangeFrequency)="onChangeFreq($event)"></app-frequency-selector></div>
+    <div class="flex-8 min-w-500">
+        <app-number-selector [styleNum]="1" [maxDigits]="7" [frequencyKhz]="1000" (onChangeFrequency)="onChangeFreq($event)"></app-number-selector>
+        <app-number-selector [styleNum]="2" [maxDigits]="7" [frequencyKhz]="1000" (onChangeFrequency)="onChangeFreq($event)"></app-number-selector>
+        <app-number-selector [styleNum]="3" [maxDigits]="4" [frequencyKhz]="1000" (onChangeFrequency)="onChangeFreq($event)"></app-number-selector>
+        <input type="range">
+
+        <select>
+            <option>Cen</option>
+            <option>Sup</option>
+        </select>
+
+        
+        <label>
+            <input type="checkbox" /> hello
+        </label>
+
+        <button>X</button>
+        <button>DC</button>
+        <button>IQ</button>
+    </div>
     <div class="flex-2 min-w-200 max-w-300"> B</div>
 </div>
 </main>

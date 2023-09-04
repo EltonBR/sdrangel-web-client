@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 import { SamplingDevicesComponent } from 'src/app/shared/components/sampling-devices/sampling-devices.component';
-import { FrequencySelectorComponent } from 'src/app/shared/components/frequency-selector/frequency-selector.component';
+import { NumberSelectorComponent } from 'src/app/shared/components/frequency-selector/number-selector.component';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { FrequencySelectorComponent } from 'src/app/shared/components/frequency-
     HomeRoutingModule,
     SharedModule,
     SamplingDevicesComponent,
-    FrequencySelectorComponent
+    NumberSelectorComponent
   ]
 })
 export class HomeModule { }

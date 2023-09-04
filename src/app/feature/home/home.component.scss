@@ -52,11 +52,60 @@ min-width: 200px;
 background-color: red;
 }
 
-
 .max-w-300 {
     max-width: 300px;
 }
 .min-w-500 {
     min-width: 500px;
     background-color: rgb(0, 119, 54);
+}
+
+@import './../../../input-range.scss';
+
+
+select {
+    font-size: 15px;
+    width: 60px;
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+select:focus-visible {
+    outline: 1px solid #999;
+}
+
+select option:hover {
+    background-color: #ffc539;
+    box-shadow: 0 0 10px 100px #1882A8 inset;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    background: #222;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 5px;
+}
+
+input[type=checkbox]:checked {
+    background-color: #ffc539;
+}
+
+button {
+    background-color: #555;
+    border-radius: 5px;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+button:active {
+    background-color: #444;
 }

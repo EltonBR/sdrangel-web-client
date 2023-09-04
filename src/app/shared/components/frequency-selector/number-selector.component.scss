@@ -1,0 +1,72 @@
+.d-flex {
+    display: flex;
+}
+
+.style-1 {
+    font-size: 20px;
+    background-color: #333;
+    color: #e0c380;
+    border: 1px solid #e0c380;
+    border-left: 0px;
+    text-align: center;
+    height: 35px;
+    width: 18px;
+    font-weight: bold;
+}
+
+.style-1:hover {
+    background-color: #7e621e;
+}
+
+
+.style-2 {
+    font-size: 18px;
+    background-color: #333;
+    color: #95f37e;
+    border: 1px solid #95f37e;
+    border-left: 0px;
+    text-align: center;
+    height: 28px;
+    font-weight: bold;
+    width: 14px;
+}
+
+.style-2:hover {
+    background-color: rgb(40, 172, 117);
+}
+
+.style-3 {
+    font-size: 18px;
+    background-color: #333;
+    color: #b9df7e;
+    border: 1px solid #b9df7e;
+    border-left: 0px;
+    text-align: center;
+    height: 28px;
+    font-weight: bold;
+    width: 14px;
+}
+
+.style-3:hover {
+    background-color: #759644;
+}
+
+
+.input-number {
+    box-sizing: border-box;
+    padding-top: 3px;
+    cursor: pointer;
+    text-underline-offset: 3px;
+    caret-color: transparent;
+}
+
+.input-number:focus {
+    animation: blinkUnderline;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinkUnderline {
+    from { text-decoration: none; }
+    to { text-decoration: underline; }
+}

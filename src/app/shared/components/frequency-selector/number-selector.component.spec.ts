@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FrequencySelectorComponent } from './frequency-selector.component';
+import { FrequencySelectorComponent } from './number-selector.component';
 
 describe('FrequencySelectorComponent', () => {
   let component: FrequencySelectorComponent;

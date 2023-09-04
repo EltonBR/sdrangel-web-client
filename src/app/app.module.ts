@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './feature/home/home.module';
-import { FrequencySelectorComponent } from './shared/components/frequency-selector/frequency-selector.component';
 
 @NgModule({
   declarations: [

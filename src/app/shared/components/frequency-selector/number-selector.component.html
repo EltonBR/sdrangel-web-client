@@ -1,0 +1,14 @@
+<div class="d-flex">
+        <!--min 4 max 9 -->
+        <input type="text" *ngIf="maxDigits > 8" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" *ngIf="maxDigits > 7" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" *ngIf="maxDigits > 6" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" *ngIf="maxDigits > 6" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" value="," disabled class="input-number style-1">
+        <input type="text" *ngIf="maxDigits > 5" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" *ngIf="maxDigits > 4" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" value="," disabled class="input-number style-1">
+        <input type="text" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+        <input type="text" [ngClass]="{'style-1': styleNum == 1, 'style-2': styleNum == 2, 'style-3': styleNum == 3}" #freqDigit class="input-number style-1">
+</div>
